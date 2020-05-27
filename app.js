@@ -7,8 +7,11 @@ const middleware = require('./middleware')
 app.get('/', (req, res) => {
   console.log(req.method)
   console.log(req.url)
-  console.log(req.date)
+  const timeStart = new Date()
+  console.log(timeStart.getFullYear(), timeStart.getMonth(), timeStart.getDate())
+  console.log(timeStart.toLocaleString())
   res.sendFile('/Users/marc/Desktop/AC-project/Middleware-exam/index.html')
+
 })
 
 app.get('/new', (req, res) => {
