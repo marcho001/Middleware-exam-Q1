@@ -4,16 +4,11 @@ const port = 3000
 const chalk = require('chalk')
 const middleware = require('./middleware')
 
+app.use(middleware)
 
 app.get('/', (req, res) => {
-  console.log(req.method)
-  console.log(req.url)
-  const timeStart = new Date()
-  let time = chalk.bold.yellowBright(timeStart.toLocaleString())
-  let reqMethod = chalk.bold.greenBright(req.method)
-  let reqUrl = chalk.bold.white.bgRed(` ${ req.url } `)
-  console.log(`${ time } | ${reqMethod} form ${reqUrl}`)
-  res.sendFile('/Users/marc/Desktop/AC-project/Middleware-exam/index.html')
+  
+  res.send('列出所有 Todo')
 
 })
 
