@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const chalk = require('chalk')
 const middleware = require('./middleware')
 
 app.use(middleware)
